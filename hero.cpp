@@ -18,8 +18,6 @@ std::list<weapon*> hero::get_list_of_the_weapon() const
 }
 
 
-
-
 hero::hero()
 {
 
@@ -28,5 +26,4 @@ hero::hero()
 
 hero::~hero()
 {
-	~_list_of_the_weapon;
 }

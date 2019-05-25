@@ -7,10 +7,30 @@
 
 #include "weapon.h"
 
-class knife : public weapon {};
-class sward : public weapon{};
-class magic_bow : public weapon{};
-class mace : public weapon{};
+class knife : public weapon {
+public:
+	knife () {};
+	knife(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
+		weapon(damage, crit, costOfUpgrade, name) {}
+class sword : public weapon{
+	public:
+	sword() {};
+	sword(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
+		weapon(damage, crit, costOfUpgrade, name) {}
+};
+class bow : public weapon{
+public:
+	bow() {};
+	bow(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
+		weapon(damage, crit, costOfUpgrade, name) {}
+};
+class mace : public weapon {
+public:
+	mace() {};
+	mace(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
+		weapon(damage, crit, costOfUpgrade, name) {}
+}
+};
 
 
 

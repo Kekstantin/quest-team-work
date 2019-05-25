@@ -1,6 +1,5 @@
 #pragma once
 #include"creature_abs.h"
-#include"weapon.h"
 
 class hero:public creature_abs
 {

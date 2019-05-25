@@ -1,5 +1,5 @@
 #pragma once
-#include "list_of_types.h"
+#include "list_of_weapons.h"
 
 class creature_abs
 {
