@@ -12,6 +12,14 @@ void door::setMA(monster_abs *mA) {
     _m_a = mA;
 }
 
+weapon *getWA() const{
+    return _w_a;
+}
+
+void setWA(weapon *wA){
+     _w_a=wA;
+}
+
 int door::getReward() const {
     return _reward;
 }
@@ -28,4 +36,4 @@ void door::setStage(int stage) {
     _stage = stage;
 }
 
-door::door(monster_abs *mA, int reward, int stage) : _m_a(mA), _reward(reward), _stage(stage) {}
+door::door(monster_abs *mA, weapon*  wA, int reward, int stage) : _m_a(mA), _w_a(wA), _reward(reward), _stage(stage) {}
