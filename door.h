@@ -12,6 +12,8 @@ class door {
 public:
     monster_abs *getMA() const;
     void setMA(monster_abs *mA);
+    weapon *getWA() const;
+    void setWA(weapon *wA);
     int getReward() const;
     void setReward(int reward);
     int getStage() const;
@@ -20,6 +22,7 @@ public:
 
 private:
     monster_abs* _m_a = nullptr;
+    weapon* _w_a = nullptr;
     int _reward;
     int _stage;
 
