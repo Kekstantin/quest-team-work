@@ -16,7 +16,7 @@ monster_abs();
 monster_abs(damage_ damage, balance_ balance, type_of_the_monster_ monster_type, class_of_the_monster_ monster_class, int sum_defeat, int donate) :
 creature_abs(damage, balance), _monster_type(monster_type), _monster_class(monster_class), _sum_defeat(sum_defeat), _donate(donate){}
 
-virtual std::string introduce() const;
+virtual std::string introduce() const = 0;
 
 int get_sum_defeat() const;
 void set_sum_defeat(int sum_defeat);
