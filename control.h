@@ -1,5 +1,5 @@
 #pragma once
-#include "C:\Users\Äìèòðèé\Downloads\quest-team-work-master\quest-team-work-master\door.h"
+#include "door.h"
 
 class control
 {
