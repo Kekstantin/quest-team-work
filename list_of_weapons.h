@@ -7,28 +7,46 @@
 
 #include "weapon.h"
 
-class knife : public weapon {
+class knife : public weapon 
+{
 public:
 	knife () {};
 	knife(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
 		weapon(damage, crit, costOfUpgrade, name) {}
+	std::string weapon::introduce
+	{
+	return "У вас есть нож с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
+	}
+};
 class sword : public weapon{
 	public:
 	sword() {};
 	sword(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
 		weapon(damage, crit, costOfUpgrade, name) {}
+	std::string weapon::introduce
+	{
+	return "У вас есть меч с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
+	}
 };
 class bow : public weapon{
 public:
 	bow() {};
 	bow(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
 		weapon(damage, crit, costOfUpgrade, name) {}
+	std::string weapon::introduce
+	{
+	return "У вас есть лук с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
+	}
 };
 class mace : public weapon {
 public:
 	mace() {};
 	mace(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
 		weapon(damage, crit, costOfUpgrade, name) {}
+	std::string weapon::introduce
+	{
+	return "У вас есть булава с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
+	}
 }
 };
 
