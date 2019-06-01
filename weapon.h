@@ -22,15 +22,15 @@ public:
     void setName(type_of_the_weapon_ name);
     weapon(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name);
     weapon() {};
-   std::string introduce();
+    virtual std::string introduce()=0;
 	
 
 private:
     damage_ _damage;
-class_of_the_monster_ _crit;
-balance_ cost_of_upgrade;
-int count_of_upgrade;
-type_of_the_weapon_ _name;
+    class_of_the_monster_ _crit;
+    balance_ cost_of_upgrade;
+    int count_of_upgrade;
+    type_of_the_weapon_ _name;
 
 
 };
