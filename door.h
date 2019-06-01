@@ -28,7 +28,7 @@ private:
     monster_abs* _m_a = nullptr;
     weapon* _w_a = nullptr;
     int _reward;
-    int _stage;
+    int _stage = 0;
 
 
 };

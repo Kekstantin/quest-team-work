@@ -18,10 +18,12 @@ balance_ getCostOfUpgrade() const;
 void setCostOfUpgrade(int costOfUpgrade);
 void upgrade_weapon();
 type_of_the_weapon_ get_type_of_the_weapon() const;
-void setName(type_of_the_weapon_ _type_of_the_weapon);
-weapon(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name);
-weapon() {};
-virtual std::string introduce()=0;
+void set_type_of_the_weapon(type_of_the_weapon_ _type_of_the_weapon);
+
+weapon(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ _type_of_the_weapon) : _damage(damage), _crit(crit), cost_of_upgrade(costOfUpgrade),
+	_type_of_the_weapon(_type_of_the_weapon) {}
+weapon() {}
+virtual std::string introduce() = 0;
 
 
 private:
