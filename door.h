@@ -7,6 +7,7 @@
 
 
 #include "list_of_monsters.h"
+#include<string> 
 
 class door {
 public:
@@ -20,6 +21,8 @@ public:
     void setReward(int reward);
     int getStage() const;
     void setStage(int stage);
+    std::string introduce() const;
+	
 
 private:
     monster_abs* _m_a = nullptr;
