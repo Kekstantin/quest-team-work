@@ -30,10 +30,6 @@ type_of_the_monster_ monster_abs::get_type_of_the_monster() const
 return _monster_type;
 }
 
-std::string introduce() const{
-return "Вы видите " + std::to_string(get_type_of_the_monster()) + "Типа " + std::to_string(get_monster_class());
-
-}
 
 monster_abs::monster_abs(){}
 
