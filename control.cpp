@@ -32,11 +32,28 @@ door * control::create_door()
 		_ws = new sword(_sword_dmg, earth_, 4, sword_);		
 	if (_rnd >= MAX_GENERATION_LIMIT_DOOR_SWORD && _rnd <= MAX_GENERATION_LIMIT_DOOR_BOW)
 		_ws = new bow(_bow_dmg, air_, 10, bow_);		
-
-	++_stage;
-	return new door();
+	
+	return new door(_ms, _ws, _balance_door, _stage);
 }
 
+void incrimentate_stage(){
+_steal_balance_slime = _steal_balance_slime * _multiplyer_for_loose_and_steal;
+_steal_balance_goblin = _steal_balance_goblin * _multiplyer_for_loose_and_steal;
+_steal_balance_scp_173 = _steal_balance_scp_173 * _multiplyer_for_loose_and_steal;
+
+_start_loose_balance_slime = _start_loose_balance_slime * _multiplyer_for_loose_and_steal;
+_start_loose_balance_goblin = _start_loose_balance_slime * _multiplyer_for_loose_and_steal;
+_start_loose_balance_scp_173 = _start_loose_balance_slime * _multiplyer_for_loose_and_steal;
+
+_dmg_for_slime = _dmg_for_slime * _multiplyer_for_monsters;
+_dmg_for_goblin = _dmg_for_goblin * _multiplyer_for_monsters;
+_dmg_for_scp_173 = _dmg_for_scp_173 * _multiplyer_for_monsters;
+
+_balance_door = _balance_door * _multiplyer_for_rewards;
+
+++_stage;
+
+}
 
 control::~control()
 {
