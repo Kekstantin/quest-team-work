@@ -21,7 +21,9 @@ public:
     type_of_the_weapon_ getName() const;
     void setName(type_of_the_weapon_ name);
     weapon(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name);
-	weapon() {};
+    weapon() {};
+   std::string introduce();
+	
 
 private:
     damage_ _damage;
