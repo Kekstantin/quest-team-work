@@ -10,28 +10,26 @@
 
 class weapon {
 public:
-    damage_ getDamage() const;
-    void setDamage(damage_ damage);
-    class_of_the_monster_ getCrit() const;
-    void setCrit(class_of_the_monster_ crit);
-    balance_ getCostOfUpgrade() const;
-    void setCostOfUpgrade(int costOfUpgrade);
-    int getCountOfUpgrade() const;
-    void setCountOfUpgrade(int countOfUpgrade);
-    type_of_the_weapon_ getName() const;
-    void setName(type_of_the_weapon_ name);
-    weapon(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name);
-    weapon() {};
-    virtual std::string introduce()=0;
-	
+damage_ getDamage() const;
+void setDamage(damage_ damage);
+class_of_the_monster_ getCrit() const;
+void setCrit(class_of_the_monster_ crit);
+balance_ getCostOfUpgrade() const;
+void setCostOfUpgrade(int costOfUpgrade);
+void upgrade_weapon();
+type_of_the_weapon_ get_type_of_the_weapon() const;
+void setName(type_of_the_weapon_ _type_of_the_weapon);
+weapon(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name);
+weapon() {};
+virtual std::string introduce()=0;
+
 
 private:
-    damage_ _damage;
-    class_of_the_monster_ _crit;
-    balance_ cost_of_upgrade;
-    int count_of_upgrade;
-    type_of_the_weapon_ _name;
-
+damage_ _damage;
+class_of_the_monster_ _crit;
+balance_ cost_of_upgrade;
+int count_of_upgrade;
+type_of_the_weapon_ _type_of_the_weapon;
 
 };
 
