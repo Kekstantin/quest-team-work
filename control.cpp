@@ -1,7 +1,6 @@
 #include "control.h"
 
 
-
 control::control()
 {
 }
@@ -14,25 +13,25 @@ door * control::create_door()
 	weapon* _ws;
 
 	int _rnd = uid(_gen);
-	if (_rnd >= 0 && _rnd < 20)
+	if (_rnd >= MIN_GENERATION_LIMIT_DOOR_WITHOUT_MONSTER && _rnd < MAX_GENERATION_LIMIT_DOOR_WITHOUT_MONSTER)
 		_ms = nullptr;
-	if (_rnd >= 20 && _rnd < 30)
-		_ms = new slime(_start_dmg_for_slime, NULL, _start_loose_balance_slime, _start_steal_balance_slime);			//todo написать входящие в конструкторры элементы
-	if (_rnd >= 30 && _rnd < 47)
-		_ms = new goblin(_start_dmg_for_goblin, NULL, _start_loose_balance_goblin, _start_steal_balance_goblin);			//todo написать входящие в конструкторры элементы
-	if (_rnd >= 47 && _rnd <= 50)
-		_ms = new scp_173(_start_dmg_for_scp_173, NULL, _start_loose_balance_scp_173, _start_steal_balance_scp_173);		//todo написать входящие в конструкторры элементы
+	if (_rnd >= MAX_GENERATION_LIMIT_DOOR_WITHOUT_MONSTER && _rnd < MAX_GENERATION_LIMIT_SLIME)
+		_ms = new slime(_start_dmg_for_slime, NULL, _start_loose_balance_slime, _start_steal_balance_slime);			
+	if (_rnd >= MAX_GENERATION_LIMIT_SLIME && _rnd < MAX_GENERATION_LIMIT_GOBLIN)
+		_ms = new goblin(_start_dmg_for_goblin, NULL, _start_loose_balance_goblin, _start_steal_balance_goblin);		
+	if (_rnd >= MAX_GENERATION_LIMIT_GOBLIN && _rnd <= MAX_GENERATION_LIMIT_SCP_173)
+		_ms = new scp_173(_start_dmg_for_scp_173, NULL, _start_loose_balance_scp_173, _start_steal_balance_scp_173);	
 
 	int _rnd1 = uid(_gen);
 
-	if (_rnd >= 0 && _rnd < 30)
+	if (_rnd >= MIN_GENERATION_LIMIT_DOOR_WITHOUT_WEAPON && _rnd < MAX_GENERATION_LIMIT_DOOR_WITHOUT_WEAPON)
 		_ws = nullptr;
-	if (_rnd >= 30 && _rnd < 30)
-		_ws = new mace(_mace_dmg, water_, 2, mace_);		//todo написать входящие в конструкторры элементы
-	if (_rnd >= 30 && _rnd < 47)
-		_ws = new sword(_sword_dmg, earth_, 4, sword_);		//todo написать входящие в конструкторры элементы
-	if (_rnd >= 47 && _rnd <= 50)
-		_ws = new bow(_bow_dmg, air_, 10, bow_);			//todo написать входящие в конструкторры элементы
+	if (_rnd >= MAX_GENERATION_LIMIT_DOOR_WITHOUT_WEAPON && _rnd < MAX_GENERATION_LIMIT_DOOR_MACE)
+		_ws = new mace(_mace_dmg, water_, 2, mace_);		
+	if (_rnd >= MAX_GENERATION_LIMIT_DOOR_MACE && _rnd < MAX_GENERATION_LIMIT_DOOR_SWORD)
+		_ws = new sword(_sword_dmg, earth_, 4, sword_);		
+	if (_rnd >= MAX_GENERATION_LIMIT_DOOR_SWORD && _rnd <= MAX_GENERATION_LIMIT_DOOR_BOW)
+		_ws = new bow(_bow_dmg, air_, 10, bow_);		
 
 	++_stage;
 	return new door();
