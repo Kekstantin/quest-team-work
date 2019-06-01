@@ -11,8 +11,8 @@ class knife : public weapon
 {
 public:
 	knife () {};
-	knife(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
-		weapon(damage, crit, costOfUpgrade, name) {}
+	knife(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ _type_of_the_weapon) :
+		weapon(damage, crit, costOfUpgrade, _type_of_the_weapon) {}
 	std::string weapon::introduce
 	{
 	return "У вас есть нож с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
@@ -21,8 +21,8 @@ public:
 class sword : public weapon{
 	public:
 	sword() {};
-	sword(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
-		weapon(damage, crit, costOfUpgrade, name) {}
+	sword(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ _type_of_the_weapon) :
+		weapon(damage, crit, costOfUpgrade, _type_of_the_weapon) {}
 	std::string weapon::introduce
 	{
 	return "У вас есть меч с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
@@ -31,8 +31,8 @@ class sword : public weapon{
 class bow : public weapon{
 public:
 	bow() {};
-	bow(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
-		weapon(damage, crit, costOfUpgrade, name) {}
+	bow(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ _type_of_the_weapon) :
+		weapon(damage, crit, costOfUpgrade, _type_of_the_weapon) {}
 	std::string weapon::introduce
 	{
 	return "У вас есть лук с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
@@ -41,8 +41,8 @@ public:
 class mace : public weapon {
 public:
 	mace() {};
-	mace(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ name) :
-		weapon(damage, crit, costOfUpgrade, name) {}
+	mace(damage_ damage, class_of_the_monster_ crit, balance_ costOfUpgrade, type_of_the_weapon_ _type_of_the_weapon) :
+		weapon(damage, crit, costOfUpgrade, _type_of_the_weapon) {}
 	std::string weapon::introduce
 	{
 	return "У вас есть булава с уроном " + std::to_string(getDamage()) + ". Стоимость улучшения " + std::to_string(getCostOfUpgrade()) + ".";
