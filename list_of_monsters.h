@@ -8,7 +8,7 @@ public:
 	slime(damage_ damage, balance_ balance, int sum_defeat, int donate) : monster_abs(damage, balance, slime_, water_, sum_defeat, donate) {}
 	std::string introduce() const
 	{
-		return " Перед вами Слизь, принадлежащая к водному типу монстров. Его сила равна " + std::to_string(_damage) + ". Он пропустит вас, если вы заплатите ему " + std::to_string(_balance) + " рублей.";
+		return " Pered vami Sliz', prinadlezhashiy k vodnomu tipu monstrov. Ego sila ravna " + std::to_string(_damage) + ". On propustit vas, esli vi zaplatite emu " + std::to_string(this->get_donate()) + " griven.";
 	}
 };
 
@@ -19,7 +19,7 @@ public:
 	goblin(damage_ damage, balance_ balance, int sum_defeat, int donate) : monster_abs(damage, balance, goblin_, earth_, sum_defeat, donate) {}
 	std::string introduce() const
 	{
-		return " Перед вами Гоблин, принадлежащий к земляному типу монстров. Его сила равна " + std::to_string(_damage) + ". Он пропустит вас, если вы заплатите ему " + std::to_string(_balance) + " рублей.";
+		return " Pered vami Goblin, prinadlezhashiy k zemlyanomu tipu monstrov. Ego sila ravna " + std::to_string(_damage) + ". On propustit vas, esli vi zaplatite emu " + std::to_string(this->get_donate()) + " griven.";
 	}
 };
 
@@ -30,7 +30,7 @@ public:
 	scp_173(damage_ damage, balance_ balance, int sum_defeat, int donate) : monster_abs(damage, balance, scp_173_, air_, sum_defeat, donate) {}
 	std::string introduce() const
 	{
-		return " Перед вами scp-173, принадлежащий к воздушному типу монстров. Его сила равна " + std::to_string(_damage) + ". Он пропустит вас, если вы заплатите ему " + std::to_string(_balance) + " рублей.";
+		return " Pered vami scp-173, prinadlezhashiy k vozdushnomu tipu monstrov. Ego sila ravna " + std::to_string(_damage) + ". On propustit vas, esli vi zaplatite emu " + std::to_string(this->get_donate()) + " griven.";
 	}
 
 };

@@ -11,9 +11,9 @@ public:
 
 private:
 	int _stage = 0;
-	damage_ _dmg_for_slime = 5;
-	damage_ _dmg_for_goblin = 15;
-	damage_ _dmg_for_scp_173 = 50;
+	damage_ _dmg_for_slime = 10;
+	damage_ _dmg_for_goblin = 25;
+	damage_ _dmg_for_scp_173 = 200;
 
 	const damage_ _knife_dmg = 10;
 	const damage_ _mace_dmg = 20;

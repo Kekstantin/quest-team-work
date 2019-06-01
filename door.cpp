@@ -38,6 +38,6 @@ void door::setStage(int stage) {
 
 std::string door::introduce() const
 {
-	std::string tmp = " Дверь, за которой вас ждет " + std::to_string(_reward) + " рублей";
+	std::string tmp = "Dver' za kotoroy vas zhdet " + std::to_string(_reward) + " rubley";
 	return tmp;
 }
