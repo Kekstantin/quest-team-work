@@ -4,7 +4,7 @@
 class hero:public creature_abs
 {
 protected:
-	std::list<weapon*> _list_of_the_weapon;
+	std::vector<weapon*> _list_of_the_weapon;
 
 public:
 	hero();
@@ -14,6 +14,6 @@ public:
 	void push_weapon(weapon* _weapon);
 	void remove_weapon(weapon* _weapon);
 
-	std::list<weapon*> get_list_of_the_weapon() const;	
+	std::vector<weapon*> get_list_of_the_weapon() const;	
 };
 

@@ -12,7 +12,7 @@ void hero::remove_weapon(weapon * _weapon)
 	_list_of_the_weapon.remove(_weapon);
 }
 
-std::list<weapon*> hero::get_list_of_the_weapon() const
+std::vector<weapon*> hero::get_list_of_the_weapon() const
 {
 	return _list_of_the_weapon;
 }
